@@ -29,10 +29,13 @@
 -->
   <script>
     "use strict";
-    let number = prompt("Введите целое число: ");
+
+    let number = +prompt("Введите целое число: ");
+
     let one = number % 10;
     let tens = ((number - one) / 10) % 10;
     let hundreds = ((number - (one + (tens * 10))) / 100) % 10;
+
     alert(`В числе ${number} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${one}`);
   </script>
 </body>
