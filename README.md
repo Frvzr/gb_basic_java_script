@@ -1,2 +1,2 @@
-# gb_basic_java_script
-geek brains basic java script
+# Базовый курс JavaScript
+## Урок 1. Основы языка JavaScript
