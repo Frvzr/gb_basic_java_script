@@ -35,7 +35,7 @@ Infinity делать не нужно, однако, в случае если б
     "use strict";
 
 
-    /*
+    /**
     * Сложение двух чисел
     * @param {number} a - Первое число
     * @param {number} b - Второе число
@@ -44,7 +44,7 @@ Infinity делать не нужно, однако, в случае если б
     function sum(arg1, arg2) {
       return arg1 + arg2;
     }
-    /*
+    /**
     * Вычетание двух чисел
     * @param {number} a - Первое число
     * @param {number} b - Второе число
@@ -54,9 +54,7 @@ Infinity делать не нужно, однако, в случае если б
       if (a > b) {
         return a - b;
       }
-      else {
-        return b - a;
-      }
+      return b - a;
     }
 
     /**
@@ -79,18 +77,15 @@ Infinity делать не нужно, однако, в случае если б
       if (b == 0) {
         return ("Делить на ноль нельзя");
       }
-      else {
-        return a / b;
-      }
-
+      return a / b;
     }
 
     /**
     * выбор математических операций
     * @param {number} arg1 - Первое число
     * @param {number} arg2 - Второе число
-    * @param {number} operation - символ операции
-    * @returns {number} функция с необходимой операцией
+    * @param {string} operation - символ операции
+    * @returns {functions} функция с необходимой операцией
     */
     function mathOperation(arg1, arg2, operation) {
       if (operation == "+") {
@@ -103,7 +98,7 @@ Infinity делать не нужно, однако, в случае если б
         return division(arg1, arg2);
       }
       else {
-        return NaN
+        return NaN;
       }
     }
 

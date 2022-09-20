@@ -28,15 +28,15 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     "use strict";
 
     function declinationOfNumber(count, one, two, five) {
-      if (count != 11 && count % 10 == 1) {
+      const countTen = count % 10
+      const countHundred = count % 100
+      if (countHundred != 11 && countTen === 1) {
         return one;
-      } else if ((count % 10 == 2 || count % 10 == 3 || count % 10 == 4) &&
-        count != 13 && count != 12 && count != 14) {
+      } else if ((countTen === 2 || countTen === 3 || countTen === 4) &&
+        countHundred != 13 && countHundred != 12 && countHundred != 14) {
         return two;
       }
-      else {
-        return five;
-      }
+      return five;
     }
 
     // Число яблок, можно пробовать поставить свое целое, положительное число.
@@ -59,7 +59,10 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     console.log(declinationOfNumber(21, "стул", "стула", "стульев"));
     console.log(declinationOfNumber(11, "стул", "стула", "стульев"));
     console.log(declinationOfNumber(99, "стул", "стула", "стульев"));
-
+    console.log(declinationOfNumber(111, "стул", "стула", "стульев"));
+    console.log(declinationOfNumber(114, "стул", "стула", "стульев"));
+    console.log(declinationOfNumber(1311, "стул", "стула", "стульев"));
+    console.log(declinationOfNumber(1322, "стул", "стула", "стульев"));
   </script>
 </body>
 
