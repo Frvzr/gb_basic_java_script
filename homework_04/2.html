@@ -58,10 +58,10 @@
       this.date = new Date();
     }
 
-    PostES5.prototype.edit = function edit(text) {
+    PostES5.prototype.edit = function (text) {
       this.text = text;
       this.date = new Date();
-    }
+    };
 
     function AttachedPostES5(author, text) {
       PostES5.call(this, author, text);
@@ -71,8 +71,9 @@
     AttachedPostES5.prototype = Object.create(PostES5.prototype);
     AttachedPostES5.prototype.constructor = PostES5;
 
-    AttachedPostES5.prototype.makeTextHighlighted = function makeTextHighlighted() {
+    AttachedPostES5.prototype.makeTextHighlighted = function () {
       this.highlighted = true;
+      this.date = new Date();
     };
 
     const post1 = new PostES5('Ivan', 'Hello');
@@ -105,13 +106,14 @@
     }
 
     class AttachedPostES6 extends PostES6 {
-      constructor(author, text, highlighted) {
+      highlighted = false
+      constructor(author, text) {
         super(author, text);
-        this.highlighted = false;
       }
 
       makeTextHighlighted() {
         this.highlighted = true;
+        this.date = new Date();
       }
     }
 
